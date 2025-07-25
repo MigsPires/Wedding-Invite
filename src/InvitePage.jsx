@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 const InvitePage = () => {
   const handleRSVP = (answer) => {
@@ -32,19 +33,28 @@ END:VCALENDAR`;
 
   return (
     <div className="invite-page">
-      <h1>Beatriz & Rui</h1>
-      <h2>22 Maio 2026</h2>
-      <button onClick={downloadCalendar}>📅 Adicionar ao Calendário</button>
-
-      <div className="locations">
-        <p>📍 <strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank">Igreja São Salvador de Torgueda, Vila Real</a></p>
-        <p>📍 <strong>Festa:</strong> <a href="https://maps.app.goo.gl/ZjGTyL7DZgzwnNe46" target="_blank">Quinta dos Jasmins, Paços de Ferreira</a></p>
+      <h1 className="invite-title">Beatriz & Rui</h1>
+      <p className="invite-phrase">"Um dia especial para celebrar o amor com aqueles que amamos."</p>
+      
+      <div className="invite-section">
+        <h2>📅 Quando</h2>
+        <p>22 Maio 2026 - 12:30</p>
+        <button className="calendar-btn" onClick={downloadCalendar}>Adicionar ao Calendário</button>
       </div>
 
-      <p>Confirmas presença?</p>
-      <div className="rsvp">
-        <button onClick={() => handleRSVP("yes")}>Vou</button>
-        <button onClick={() => handleRSVP("no")}>Não Vou</button>
+      <div className="invite-section">
+        <h2>📍 Onde</h2>
+        <p><strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank" rel="noreferrer">Igreja São Salvador de Torgueda, Vila Real</a></p>
+        <p><strong>Festa:</strong> <a href="https://maps.app.goo.gl/ZjGTyL7DZgzwnNe46" target="_blank" rel="noreferrer">Quinta dos Jasmins, Paços de Ferreira</a></p>
+      </div>
+
+      <div className="invite-section">
+        <h2>RSVP</h2>
+        <p>Confirmas presença?</p>
+        <div className="rsvp-buttons">
+          <button onClick={() => handleRSVP("yes")}>Vou</button>
+          <button onClick={() => handleRSVP("no")}>Não Vou</button>
+        </div>
       </div>
 
       <audio autoPlay loop>
