@@ -7,7 +7,7 @@ BEGIN:VEVENT
 DTSTART:20260522T113000Z
 DTEND:20260522T153000Z
 SUMMARY:Casamento Beatriz & Rui
-LOCATION:Igreja de Torgueda, Vila Real / Quinta dos Jasmins, Paços de Ferreira
+LOCATION:Igreja São Salvador de Torgueda, Vila Real / Quinta dos Jasmins, Paços de Ferreira
 DESCRIPTION:Vamos celebrar juntos!
 END:VEVENT
 END:VCALENDAR`;
