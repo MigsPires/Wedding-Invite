@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { differenceInSeconds } from 'date-fns';
 
 export default function Home() {
-  const weddingDate = new Date('2026-05-22T12:30:00');
+  const weddingDate = new Date('2026-05-22T12:20:00');
   const [timeLeft, setTimeLeft] = useState('');
 
   const whatsappNumber = '351913925814';
