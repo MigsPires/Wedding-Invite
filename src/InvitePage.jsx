@@ -1,4 +1,5 @@
 import React from 'react';
+import MiniCalendar from './MiniCalendar';
 import './styles.css';
 
 const InvitePage = () => {
@@ -9,28 +10,6 @@ const InvitePage = () => {
     window.open(`https://wa.me/351913925814?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
-  const downloadCalendar = () => {
-    const start = "20260522T123000";
-    const end = "20260522T153000";
-    const ics = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-DTSTART:${start}
-DTEND:${end}
-SUMMARY:Casamento Beatriz & Rui
-LOCATION:Igreja de Torgueda, Vila Real
-DESCRIPTION:Vamos celebrar juntos!
-END:VEVENT
-END:VCALENDAR`;
-    const blob = new Blob([ics], { type: "text/calendar" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "casamento-beatriz-rui.ics";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <div className="invite-page">
       <h1 className="invite-title">Beatriz & Rui</h1>
@@ -39,7 +18,7 @@ END:VCALENDAR`;
       <div className="invite-section">
         <h2>📅 Quando</h2>
         <p>22 Maio 2026 - 12:30</p>
-        <button className="calendar-btn" onClick={downloadCalendar}>Adicionar ao Calendário</button>
+        <MiniCalendar />
       </div>
 
       <div className="invite-section">
