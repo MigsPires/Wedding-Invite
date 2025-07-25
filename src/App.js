@@ -80,7 +80,7 @@ const App = () => {
   const overlayStyle = {
     position: "absolute",
     inset: 0,
-    backgroundColor: "rgba(255,255,255,0.82)",
+    backgroundColor: "rgba(255,255,255,0.3)",
   };
 
   const cardStyle = {
