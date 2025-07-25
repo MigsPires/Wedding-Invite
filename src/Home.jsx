@@ -25,7 +25,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center flex items-center justify-center p-4" style={{ backgroundImage: "url('public/fundo1.jpeg')" }}>
+    <div className="min-h-screen bg-cover bg-center flex items-center justify-center p-4" style={{ backgroundImage: "url('public/fundo.png')" }}>
       <div className="bg-white bg-opacity-80 rounded-2xl shadow-xl p-8 text-center max-w-md animate-fade-in">
         <h1 className="text-4xl font-['Dancing Script'] text-[#6B3E26] mb-4 animate-fade-in">Beatriz & Rui</h1>
         <p className="text-lg mb-2 animate-fade-in">📅 22 Maio 2026</p>

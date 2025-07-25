@@ -63,7 +63,7 @@ const App = () => {
 
   const pageStyle = {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    backgroundImage: "url('/fundo.jpeg')",
+    backgroundImage: "url('/fundo.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
