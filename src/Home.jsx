@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { differenceInSeconds } from 'date-fns';
 
 export default function Home() {
-  const weddingDate = new Date('2026-05-22T12:30:00');
+  const weddingDate = new Date('2026-05-22T12:20:00');
   const [timeLeft, setTimeLeft] = useState('');
 
   const whatsappNumber = '351913925814';
@@ -34,7 +34,7 @@ export default function Home() {
         <button className="bg-[#6B3E26] text-white px-4 py-2 rounded-xl mb-4 transition transform hover:scale-105 animate-fade-in-delay">Adicionar ao Calendário</button>
 
         <div className="text-sm text-[#6B3E26] mb-2 animate-fade-in-delay">
-          <p>📍 <strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank" className="underline transition transform hover:scale-110">Igreja de Torgueda, Vila Real</a></p>
+          <p>📍 <strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank" className="underline transition transform hover:scale-110">Igreja São Salvador de Torgueda, Vila Real</a></p>
           <p>📍 <strong>Festa:</strong> <a href="https://maps.app.goo.gl/ZjGTyL7DZgzwnNe46" target="_blank" className="underline transition transform hover:scale-110">Quinta dos Jasmins, Paços de Ferreira</a></p>
         </div>
 
