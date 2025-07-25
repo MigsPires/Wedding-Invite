@@ -58,7 +58,9 @@ const App = () => {
     <div
       style={{
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        backgroundColor: "#E2725B",
+        backgroundImage: "url('/fundo.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         color: "#fff",
         minHeight: "100vh",
         display: "flex",
