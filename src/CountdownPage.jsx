@@ -24,7 +24,7 @@ const CountdownPage = ({ onEnter }) => {
       <div className="overlay">
         <h1>Beatriz & Rui</h1>
         <p className="countdown">{timeLeft}</p>
-        <button className="enter-btn" onClick={onEnter}>💌 Ver Convite</button>
+        <button className="enter-btn" onClick={onEnter}>💌 Ver  Convite</button>
       </div>
     </div>
   );
