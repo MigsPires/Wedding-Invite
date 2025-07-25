@@ -53,8 +53,8 @@ const App = () => {
   const handleRSVP = (answer) => {
     const message =
       answer === "yes"
-        ? "Olá! Confirmo que vou ao casamento de Beatriz e Rui! 🎉"
-        : "Olá! Infelizmente não vou poder ir ao casamento de Beatriz e Rui.";
+        ? "Olá! Confirmo que vou ao vosso casamento ! 🎉"
+        : "Olá! Infelizmente não vou poder ir ao casamento.";
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
