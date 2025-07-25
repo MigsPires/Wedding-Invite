@@ -37,7 +37,7 @@ END:VCALENDAR`;
       <button onClick={downloadCalendar}>📅 Adicionar ao Calendário</button>
 
       <div className="locations">
-        <p>📍 <strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank">Igreja de Torgueda, Vila Real</a></p>
+        <p>📍 <strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank">Igreja São Salvador de Torgueda, Vila Real</a></p>
         <p>📍 <strong>Festa:</strong> <a href="https://maps.app.goo.gl/ZjGTyL7DZgzwnNe46" target="_blank">Quinta dos Jasmins, Paços de Ferreira</a></p>
       </div>
 
