@@ -1,0 +1,88 @@
+.invite-page {
+  padding: 2rem;
+  text-align: center;
+  background: url('/fundo.jpeg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #5C4033;
+}
+
+.invite-title {
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  color: #6B3E26;
+  margin-bottom: 0.5rem;
+}
+
+.invite-phrase {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.invite-section {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.invite-section h2 {
+  margin-top: 0;
+  color: #a35134;
+}
+
+.invite-section a {
+  color: #6B3E26;
+  text-decoration: underline;
+}
+
+.calendar-btn {
+  background: linear-gradient(135deg, #a35134, #6B3E26);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.calendar-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #6B3E26, #a35134);
+}
+
+.rsvp-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.rsvp-buttons button {
+  background-color: #a35134;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rsvp-buttons button:last-child {
+  background-color: #5c3a2e;
+}
+
+.rsvp-buttons button:hover {
+  transform: scale(1.05);
+}
