@@ -25,7 +25,7 @@ const CountdownTimer = () => (
 const createCalendarLink = () => {
   const title = "Casamento Beatriz & Rui";
   const location =
-    "Igreja de Torgueda, Vila Real e Quinta dos Jasmins, Paços de Ferreira";
+    "Igreja São Salvador de Torgueda, Vila Real e Quinta dos Jasmins, Paços de Ferreira";
   const description = "Vamos celebrar juntos!";
 
   const startDate = weddingDate.toISOString().replace(/-|:|\.\d+/g, "");
