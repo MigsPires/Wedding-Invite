@@ -33,85 +33,87 @@ button:hover {
   transform: scale(1.05);
 } 
 */
-
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.app {
+.countdown-page {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .overlay {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
-  border-radius: 16px;
   text-align: center;
-  max-width: 90vw;
+  border-radius: 12px;
 }
 
-.overlay h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.8rem;
+h1 {
+  font-size: 3rem;
   color: #6B3E26;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 
-.overlay p {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
+.countdown {
+  font-size: 1.5rem;
   color: #5C4033;
+  margin-bottom: 2rem;
 }
 
-.subtext {
-  margin-top: 1.2rem;
-  font-style: italic;
-}
-
-.calendar-container {
-  margin-top: 1rem;
-}
-
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
-  margin-top: 0.5rem;
-}
-
-.month {
-  grid-column: span 7;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.day, .day-name {
-  padding: 8px;
-  border-radius: 6px;
-  background: #f0e6dc;
-  font-size: 0.9rem;
-}
-
-.day-name {
-  font-weight: bold;
-  background: #e2d2c2;
-}
-
-.day.empty {
-  background: transparent;
-}
-
-.day.wedding-day {
-  background: #a35134;
+.enter-btn {
+  background-color: #a35134;
   color: white;
-  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.enter-btn:hover {
+  transform: scale(1.05);
+}
+
+.invite-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fffaf3;
+  min-height: 100vh;
+}
+
+.invite-page h1 {
+  font-size: 2.5rem;
+  color: #6B3E26;
+}
+
+.invite-page h2 {
+  font-size: 1.8rem;
+  color: #a35134;
+}
+
+.invite-page .locations {
+  margin: 1.5rem 0;
+}
+
+.invite-page .rsvp button {
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #a35134;
+  color: white;
+}
+
+.invite-page .rsvp button:last-child {
+  background-color: #5c3a2e;
 }
