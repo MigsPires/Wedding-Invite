@@ -107,7 +107,7 @@ const App = () => {
     fontSize: "1rem",
     cursor: "pointer",
     transition: "transform 0.2s",
-    boxShadow: "0 2px 5px rgba(0,0,0,0.15)",
+    boxShadow: "0 2px 5px rgba(0,0,0,0.13)",
   };
 
   return (
