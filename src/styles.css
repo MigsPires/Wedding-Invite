@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 /* Efeito fade-in */
+/*
 .fade-in {
   animation: fadeIn 1.2s ease-in forwards;
   opacity: 0;
@@ -17,7 +18,7 @@
   }
 }
 
-/* Ajustes gerais */
+/* Ajustes gerais 
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -30,4 +31,87 @@ button {
 
 button:hover {
   transform: scale(1.05);
+} 
+*/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 90vw;
+}
+
+.overlay h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  color: #6B3E26;
+  margin-bottom: 0.3rem;
+}
+
+.overlay p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #5C4033;
+}
+
+.subtext {
+  margin-top: 1.2rem;
+  font-style: italic;
+}
+
+.calendar-container {
+  margin-top: 1rem;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-top: 0.5rem;
+}
+
+.month {
+  grid-column: span 7;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.day, .day-name {
+  padding: 8px;
+  border-radius: 6px;
+  background: #f0e6dc;
+  font-size: 0.9rem;
+}
+
+.day-name {
+  font-weight: bold;
+  background: #e2d2c2;
+}
+
+.day.empty {
+  background: transparent;
+}
+
+.day.wedding-day {
+  background: #a35134;
+  color: white;
+  font-weight: bold;
 }
