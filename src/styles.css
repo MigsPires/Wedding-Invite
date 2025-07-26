@@ -160,7 +160,7 @@ h1 {
 }
 
 .invite-section {
-  background: rgba(255, 255, 255, 0.85);
+  background: transparent;
   padding: 1rem 2rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
@@ -178,10 +178,10 @@ h1 {
   color: #6B3E26;
   text-decoration: underline;
 }
-
+/* Calendar Page */
 .calendar-btn {
   background: linear-gradient(135deg, #a35134, #6B3E26);
-  color: white;
+  background: transparent;
   border: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
@@ -220,4 +220,57 @@ h1 {
 
 .rsvp-buttons button:hover {
   transform: scale(1.05);
+}
+
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.calendar {
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.calendar .month {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #6B3E26;
+}
+
+.calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+}
+
+.day, .day-name {
+  padding: 0.3rem;
+  background: transparent; /* Sem fundo */
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #5C4033;
+}
+
+.day-name {
+  font-weight: bold;
+  color: #6B3E26;
+}
+
+.wedding-day {
+  background: transparent;
+  color: #a35134;
+  font-weight: bold;
+  border: 2px solid #a35134;
+  border-radius: 6px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.wedding-day:hover {
+  transform: scale(1.1);
+  background: rgba(163, 81, 52, 0.1); /* apenas destaque leve ao hover */
 }

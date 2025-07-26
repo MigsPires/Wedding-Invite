@@ -24,7 +24,8 @@ const MiniCalendar = () => {
   return (
     <div className="calendar-container">
       <div className="calendar">
-        <div className="month">Maio 2026</div>
+        <p className="invite-phrase">"Um dia especial para celebrar o amor com aqueles que amamos."</p>
+        <div className="month">MAIO 2026</div>
         <div className="days">
           {['D', 'S', 'T', 'Q', 'Q', 'S', 'S'].map((d, i) => (
             <div key={i} className="day-name">{d}</div>
@@ -37,7 +38,7 @@ const MiniCalendar = () => {
               <div
                 key={day}
                 className={`day ${isWeddingDay ? 'wedding-day' : ''}`}
-                onClick={isWeddingDay ? downloadICS : null}
+                onClick={isWeddingDay ? downloadICS : undefined}
                 style={{ cursor: isWeddingDay ? 'pointer' : 'default' }}
               >
                 {day}
@@ -49,6 +50,5 @@ const MiniCalendar = () => {
     </div>
   );
 };
-
 
 export default MiniCalendar;

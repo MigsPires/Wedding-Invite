@@ -22,8 +22,7 @@ const CountdownPage = ({ onEnter }) => {
 
   return (
     <div className="countdown-page" style={{ backgroundImage: "url('/fundo.jpeg')" }}>
-      <div className="overlay">
-        <h1 className="title">Beatriz & Rui</h1>
+      <div className="overlay"style={{ backgroundImage: "url('/br.jpeg')" }} >
         <div className="countdown-container">
           <div className="time-box"><span>{time.days}</span><small>Dias</small></div>
           <div className="time-box"><span>{time.hours}</span><small>Horas</small></div>
