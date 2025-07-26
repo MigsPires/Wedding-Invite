@@ -47,5 +47,4 @@ const CountdownPage = ({ onEnter }) => {
 };
 
 
-
 export default CountdownPage;

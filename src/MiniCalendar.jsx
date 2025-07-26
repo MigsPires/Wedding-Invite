@@ -1,54 +1,37 @@
 import React from 'react';
+import MiniCalendar from './MiniCalendar';
+import './styles.css';
 
-const downloadICS = () => {
-  const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-DTSTART:20260522T113000Z
-DTEND:20260522T153000Z
-SUMMARY:Casamento Beatriz & Rui
-LOCATION:Igreja São Salvador de Torgueda, Vila Real / Quinta dos Jasmins, Paços de Ferreira
-DESCRIPTION:Vamos celebrar juntos!
-END:VEVENT
-END:VCALENDAR`;
-  const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "casamento-beatriz-rui.ics";
-  a.click();
-  window.URL.revokeObjectURL(url);
-};
+const InvitePage = () => {
+  const handleRSVP = (answer) => {
+    const msg = answer === "yes"
+      ? "Olá! Confirmo que vou ao casamento de Beatriz e Rui! 🎉"
+      : "Olá! Infelizmente não vou poder ir ao casamento de Beatriz e Rui.";
+    window.open(`https://wa.me/351913925814?text=${encodeURIComponent(msg)}`, "_blank");
+  };
 
-const MiniCalendar = () => {
   return (
-    <div className="calendar-container">
-      <div className="calendar">
-        <p className="invite-phrase">"Um dia especial para celebrar o amor com aqueles que amamos."</p>
-        <div className="month">MAIO 2026</div>
-        <div className="days">
-          {['D', 'S', 'T', 'Q', 'Q', 'S', 'S'].map((d, i) => (
-            <div key={i} className="day-name">{d}</div>
-          ))}
-          {Array.from({ length: 21 }, (_, i) => <div key={i} className="day empty" />)}
-          {Array.from({ length: 31 }, (_, i) => {
-            const day = i + 1;
-            const isWeddingDay = day === 22;
-            return (
-              <div
-                key={day}
-                className={`day ${isWeddingDay ? 'wedding-day' : ''}`}
-                onClick={isWeddingDay ? downloadICS : undefined}
-                style={{ cursor: isWeddingDay ? 'pointer' : 'default' }}
-              >
-                {day}
-              </div>
-            );
-          })}
+    <div className="invite-page">
+      
+      <div className="invite-section">
+        <MiniCalendar />
+      </div>
+
+      <div className="invite-section">
+        <h2>📍 Onde 📍whatsapp </h2>
+        <p><strong>Igreja:</strong> <a href="https://maps.app.goo.gl/qdz9XYx79PH3uSGL6" target="_blank" rel="noreferrer">Igreja São Salvador de Torgueda, Vila Real</a></p>
+        <p><strong>Festa:</strong> <a href="https://maps.app.goo.gl/ZjGTyL7DZgzwnNe46" target="_blank" rel="noreferrer">Quinta dos Jasmins, Paços de Ferreira</a></p>
+      </div>
+
+      <div className="invite-section">
+        <h2>Confirmas presença?</h2>
+        <div className="rsvp-buttons">
+          <button onClick={() => handleRSVP("yes")}>Sim</button>
+          <button onClick={() => handleRSVP("no")}>Não</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default MiniCalendar;
+export default InvitePage;
