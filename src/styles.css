@@ -53,9 +53,12 @@ body, html {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* opcional para efeito parallax */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem; /* adicionado para respiro em ecrãs pequenos */
 }
 
 /* Overlay transparente */
@@ -132,6 +135,61 @@ h1 {
 
 .invite-page .rsvp button:last-child {
   background-color: #5c3a2e;
+}
+.logo {
+  max-width: 180px; /* Aumenta o tamanho */
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;@media (max-width: 768px) {
+  .countdown-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .time-box {
+    min-width: 60px;
+    padding: 0.5rem;
+  }
+
+  .time-box span {
+    font-size: 1.4rem;
+  }
+
+  .time-box small {
+    font-size: 0.7rem;
+  }
+
+  .logo {
+    max-width: 130px;
+    margin-bottom: 1rem;
+  }
+
+  .enter-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .invite-title {
+    font-size: 2rem;
+  }
+
+  .invite-phrase {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .invite-section {
+    max-width: 90%;
+  }
+}
+
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Efeito de hover suave */
 }
 .invite-page {
   padding: 2rem;
