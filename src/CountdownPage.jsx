@@ -34,7 +34,9 @@ const CountdownPage = ({ onEnter }) => {
             <div className="time-box"><span>{time.minutes}</span><small>Min</small></div>
             <div className="time-box"><span>{time.seconds}</span><small>Seg</small></div>
           </div>
-          <button className="enter-btn" onClick={onEnter}>💌 Ver Convite</button>
+          <button onClick={() => navigate('/InvitePage')}>
+  💌 Ver Convite
+</button>
         </div>
       </div>
     </div>

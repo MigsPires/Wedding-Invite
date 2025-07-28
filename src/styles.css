@@ -15,9 +15,11 @@ body, html {
 /* Countdown Container */
 .countdown-container {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap; /* ✅ Impede quebrar linha */
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .time-box {
@@ -77,9 +79,13 @@ h1 {
   margin-bottom: 1rem;
 }
 .countdown-item {
-  min-width: 80px;
-  flex: 1 1 auto;
+  min-width: auto;
+  width: 22vw;         /* ✅ Responsivo */
+  max-width: 80px;
   text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 .countdown {
   font-size: 1.5rem;
