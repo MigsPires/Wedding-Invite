@@ -1,164 +1,81 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+
+
+.logo {
+  max-width: 120px;
+  width: 30vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  transition: transform 0.3s ease;
 }
 
-.title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3rem;
-  color: #6B3E26;
-  margin-bottom: 2rem;
-}
+.logo:hover {
+  transform: scale(1.05);
 
-/* Countdown Container */
+}/* Countdown Container */
 .countdown-container {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
-
+.countdown-page {
+ min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
 .time-box {
   background: rgba(255, 255, 255, 0.4);
+  border: 2px solid #a35134;
   border-radius: 12px;
-  padding: 1rem;
-  min-width: 80px;
+  padding: 0.8rem;
+  min-width: 60px;
   text-align: center;
-  border: 2px solid #a35134; /* Moldura terracota */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: pop 1.2s ease-in-out infinite alternate;
 }
 
 .time-box span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #a35134;
 }
 
 .time-box small {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #5c3a2e;
 }
-
-/* Pop Animation */
-@keyframes pop {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.08); }
-}
-
-
-/* Countdown Page */
-.countdown-page {
-  min-height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; /* opcional para efeito parallax */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem; /* adicionado para respiro em ecrãs pequenos */
-}
-
-/* Overlay transparente */
 .overlay {
-  background: transparent;
-  padding: 2rem;
+ background: rgba(255, 255, 255, 0.0); /* transparente */
   text-align: center;
-}
-
-/* Títulos */
-h1 {
-  font-size: 3rem;
-  color: #6B3E26;
-  margin-bottom: 1rem;
-}
-
-.countdown {
-  font-size: 1.5rem;
-  color: #5C4033;
-  margin-bottom: 2rem;
-}
-
-/* Botão principal */
-.enter-btn {
-  background: linear-gradient(135deg, #a35134, #6B3E26);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
-
-.enter-btn:hover {
-  transform: scale(1.1);
-  background: linear-gradient(135deg, #6B3E26, #a35134);
-}
-
-/* Invite Page */
-.invite-page {
-  padding: 2rem;
-  text-align: center;
-  background-color: #fffaf3;
-  min-height: 100vh;
-}
-
-.invite-page h1 {
-  font-size: 2.5rem;
-  color: #6B3E26;
-}
-
-.invite-page h2 {
-  font-size: 1.8rem;
-  color: #a35134;
-}
-
-.invite-page .locations {
-  margin: 1.5rem 0;
-}
-
-.invite-page .rsvp button {
-  margin: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: #a35134;
-  color: white;
-}
-
-.invite-page .rsvp button:last-child {
-  background-color: #5c3a2e;
+  padding: 1rem;
 }
 .logo {
-  max-width: 180px; /* Aumenta o tamanho */
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease-in-out;
+ max-width: 150px;
+  width: 40vw;
+  margin: 0 auto 2rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;@media (max-width: 768px) {
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .countdown-container {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
 
   .time-box {
-    min-width: 60px;
-    padding: 0.5rem;
+    min-width: 55px;
+    padding: 0.6rem;
   }
 
   .time-box span {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .time-box small {
@@ -166,174 +83,28 @@ h1 {
   }
 
   .logo {
-    max-width: 130px;
-    margin-bottom: 1rem;
+    max-width: 100px;
   }
 
   .enter-btn {
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
   }
-
-  .invite-title {
-    font-size: 2rem;
-  }
-
-  .invite-phrase {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .invite-section {
-    max-width: 90%;
-  }
 }
 
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05); /* Efeito de hover suave */
-}
-.invite-page {
-  padding: 2rem;
-  text-align: center;
-  background: url('/fundo.jpeg') center/cover no-repeat;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #5C4033;
-}
-
-.invite-title {
-  font-size: 3rem;
-  font-family: 'Dancing Script', cursive;
-  color: #6B3E26;
-  margin-bottom: 0.5rem;
-}
-
-.invite-phrase {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 500px;
-}
-
-.invite-section {
-  background: transparent;
-  padding: 1rem 2rem;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
-
-.invite-section h2 {
-  margin-top: 0;
-  color: #a35134;
-}
-
-.invite-section a {
-  color: #6B3E26;
-  text-decoration: underline;
-}
-/* Calendar Page */
-.calendar-btn {
+ .enter-btn {
   background: linear-gradient(135deg, #a35134, #6B3E26);
-  background: transparent;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
+  color: white;
+  padding: 0.8rem 2rem;
   border-radius: 50px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: none;
   cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
 
-.calendar-btn:hover {
+.enter-btn:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #6B3E26, #a35134);
-}
-
-.rsvp-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-.rsvp-buttons button {
-  background-color: #a35134;
-  color: white;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.rsvp-buttons button:last-child {
-  background-color: #5c3a2e;
-}
-
-.rsvp-buttons button:hover {
-  transform: scale(1.05);
-}
-
-
-.calendar-container {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-}
-
-.calendar {
-  padding: 1rem;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.calendar .month {
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #6B3E26;
-}
-
-.calendar .days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.3rem;
-}
-
-
-.day, .day-name {
-  padding: 0.3rem;
-  background: transparent; /* Sem fundo */
-  border-radius: 6px;
-  font-size: 0.9rem;
-  color: #5C4033;
-}
-
-.day-name {
-  font-weight: bold;
-  color: #6B3E26;
-}
-
-.wedding-day {
-  background: transparent;
-  color: #a35134;
-  font-weight: bold;
-  border: 2px solid #a35134;
-  border-radius: 6px;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.wedding-day:hover {
-  transform: scale(1.1);
-  background: rgba(163, 81, 52, 0.1); /* apenas destaque leve ao hover */
 }

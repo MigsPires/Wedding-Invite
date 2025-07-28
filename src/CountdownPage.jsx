@@ -24,21 +24,17 @@ const CountdownPage = () => {
 
   return (
     <div className="countdown-page" style={{ backgroundImage: "url('/fundo.jpeg')" }}>
-      <div className="b">
-        <div className="overlay">
-          <img src="/logo.png" className="logo" alt="Logo Beatriz & Rui" />
+      <div className="overlay">
+        <img src="/logo.png" className="logo" alt="Logo Beatriz & Rui" />
+        <div className="countdown-container">
+          <div className="time-box"><span>{time.days}</span><small>Dias</small></div>
+          <div className="time-box"><span>{time.hours}</span><small>Horas</small></div>
+          <div className="time-box"><span>{time.minutes}</span><small>Min</small></div>
+          <div className="time-box"><span>{time.seconds}</span><small>Seg</small></div>
         </div>
-        <div className="overlay">
-          <div className="countdown-container">
-            <div className="time-box"><span>{time.days}</span><small>Dias</small></div>
-            <div className="time-box"><span>{time.hours}</span><small>Horas</small></div>
-            <div className="time-box"><span>{time.minutes}</span><small>Min</small></div>
-            <div className="time-box"><span>{time.seconds}</span><small>Seg</small></div>
-          </div>
-          <button onClick={() => navigate('/invite')} className="enter-btn">
-            💌 Ver Convite
-          </button>
-        </div>
+        <button onClick={() => navigate('/invite')} className="enter-btn">
+          💌 Ver Convite
+        </button>
       </div>
     </div>
   );
