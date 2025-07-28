@@ -1,7 +1,8 @@
 body, html {
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .title {
@@ -16,7 +17,7 @@ body, html {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .time-box {
@@ -52,9 +53,9 @@ body, html {
 /* Countdown Page */
 .countdown-page {
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed; /* opcional para efeito parallax */
   display: flex;
   justify-content: center;
@@ -75,7 +76,11 @@ h1 {
   color: #6B3E26;
   margin-bottom: 1rem;
 }
-
+.countdown-item {
+  min-width: 80px;
+  flex: 1 1 auto;
+  text-align: center;
+}
 .countdown {
   font-size: 1.5rem;
   color: #5C4033;
