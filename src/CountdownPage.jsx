@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const weddingDate = new Date('2026-05-22T12:30:00');
 
-const CountdownPage = () => {
-  const navigate = useNavigate();
 
-// const CountdownPage = ({ onEnter }) => {
+const CountdownPage = ({ onEnter }) => {
   const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -37,9 +34,7 @@ const CountdownPage = () => {
             <div className="time-box"><span>{time.minutes}</span><small>Min</small></div>
             <div className="time-box"><span>{time.seconds}</span><small>Seg</small></div>
           </div>
-          <button onClick={() => navigate('/invite')}>
-  💌 Ver Convite
-</button>
+          <button className="enter-btn" onClick={onEnter}>💌 Ver Convite</button>
         </div>
       </div>
     </div>
